@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 
 .menu-icon {
@@ -37,7 +38,7 @@ body {
 .line-1,
 .line-3 {
   width: 1.8rem;
-  transition: width 0.3s;
+  transition: all 0.3s;
 }
 
 .menu-icon:hover .line {
@@ -73,7 +74,7 @@ body {
 
 /* navigation */
 .navigation {
-  margin-left: 8rem;
+  left: -32rem;
   position: fixed;
   width: 40rem;
   height: 100%;
@@ -89,6 +90,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  transition: left 0.8s cubic-bezier(1, 0, 0, 1);
 }
 
 .navigation-heading {
@@ -192,6 +194,24 @@ body {
   color: #fff;
   font-size: 1.2rem;
   margin-top: 1.5rem;
+}
+
+.checkbox:checked ~ .navigation {
+  left: 8rem;
+}
+
+.checkbox:checked ~ .sidebar .line-1 {
+  transform: rotate(-405deg) translate(-5px, 6px);
+  width: 2.5rem;
+}
+
+.checkbox:checked ~ .sidebar .line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .sidebar .line-3 {
+  transform: rotate(405deg) translate(-5px, -6px);
+  width: 2.5rem;
 }
 /* end of navigation */
 /* end of navbar */
