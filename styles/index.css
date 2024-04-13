@@ -367,6 +367,33 @@ body {
 }
 .about-us-images {
   flex: 1 1;
+  position: relative;
+}
+
+.image {
+  width: 32rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4);
+  border-radius: 0.4rem;
+  border: 0.2rem solid #b85d1c;
+}
+
+.image-1 {
+  transform: translate(-15%, -85%);
+}
+
+.image-2 {
+  transform: translate(-90%, -90%);
+}
+
+.image-3 {
+  transform: translate(-100%, -20%);
+}
+
+.image-4 {
+  transform: translate(-20%, -10%);
 }
 /* end of about */
 /* end of header */
