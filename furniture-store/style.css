@@ -1,29 +1,92 @@
-@import url('https://fonts.googleapis.com/css?family=Alegreya');
-
+@import url("https://fonts.googleapis.com/css?family=Alegreya");
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    box-sizing: border-box;
-    font-family: 'Alegreya', serif;
+  box-sizing: border-box;
+  font-family: "Alegreya", serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
+/* navbar */
+.container {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(
+      6rem,
+      1fr
+    );
+  grid-template-rows: repeat(3, min-content);
+  row-gap: 1.6rem;
+  margin-top: 1.6rem;
+}
 
+.social-icons {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  align-items: center;
+}
 
+.social-icon {
+  font-size: 1.8rem;
+  color: #12376e;
+  transition: all 0.5s;
+}
 
+.social-icon:hover {
+  color: #34598f;
+  transform: rotateZ(360deg);
+}
 
+.first-nav {
+  grid-column: 6 / 10;
+  grid-row: 1 / 2;
+}
 
+.first-nav-list {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
 
+.first-nav-link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #12376e;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
 
+.first-nav-link::after {
+  content: "";
+  width: 0;
+  height: 0.1rem;
+  background-color: #12376e;
+  display: block;
+  margin: auto;
+  transition: all 0.4s;
+}
 
+.first-nav-link:hover::after {
+  width: 100%;
+}
 
+.first-nav-link span {
+  font-size: 1.3rem;
+  color: #34598f;
+}
 
-
-
+i {
+  font-size: 1.3rem;
+  margin-right: 0.3rem;
+}
+/* end of navbar */
