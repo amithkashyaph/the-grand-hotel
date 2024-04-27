@@ -21,7 +21,7 @@ body {
       6rem,
       1fr
     );
-  grid-template-rows: repeat(3, min-content) 70vh;
+  grid-template-rows: repeat(3, min-content) 70vh min-content;
   row-gap: 1.6rem;
   margin-top: 1.6rem;
 }
@@ -293,6 +293,7 @@ i {
 
 .slideshow {
   overflow: hidden;
+  position: relative;
 }
 
 .slideshow-wrapper {
@@ -305,7 +306,7 @@ i {
 
 .slide img {
   width: 100%;
-  height: 100%;
+  height: 84%;
   object-fit: cover;
 }
 
@@ -360,7 +361,7 @@ i {
   background-color: #bbb;
   cursor: pointer;
   position: absolute;
-  top: 110%;
+  top: 75%;
   transform: translateX(-50%);
   z-index: 10;
 }
@@ -404,3 +405,61 @@ i {
   left: -300%;
 }
 /* end of banner */
+
+/* day offer */
+.day-offer {
+  grid-column: 2 / 10;
+  grid-row: 5 / 6;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  gap: 1.6rem 3.2rem;
+  justify-items: center;
+}
+
+.day-offer-image-one {
+  grid-column: 1 / 3;
+  grid-row: 1 / -1;
+  width: 100%;
+}
+
+.day-offer-heading {
+  grid-column: 3 / -1;
+  grid-row: 1 / 2;
+  font-size: 6rem;
+  color: #23487f;
+}
+
+.day-offer-paragraph {
+  grid-column: 3 / -1;
+  grid-row: 2 / 3;
+  font-size: 3rem;
+  color: #34598f;
+}
+
+.day-offer-btn {
+  grid-column: 3 / -1;
+  grid-row: 3 / 4;
+  width: 16rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background: linear-gradient(to top, #00154c, #123760, #23487f);
+  border: none;
+  text-transform: uppercase;
+  outline: none;
+  box-shadow: 0.2rem 0.2rem 1rem #777;
+  cursor: pointer;
+}
+
+.day-offer-btn:hover {
+  box-shadow: 0.2rem 0.2rem 2rem #777;
+}
+
+.day-offer-image-two {
+  grid-column: 3 / -1;
+  grid-row: 4 / -1;
+  width: 100%;
+  align-self: end;
+}
+/* end of day offer */
