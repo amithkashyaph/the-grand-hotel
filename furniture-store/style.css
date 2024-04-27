@@ -21,7 +21,7 @@ body {
       6rem,
       1fr
     );
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: repeat(3, min-content) 70vh;
   row-gap: 1.6rem;
   margin-top: 1.6rem;
 }
@@ -227,3 +227,67 @@ i {
   color: #458a9f;
 }
 /* end of dropdown */
+
+/* banner */
+
+.banner {
+  grid-column: 2 / 10;
+  grid-row: 4 / 5;
+  background-color: #ccc;
+  position: relative;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.banner-heading {
+  font-size: 10rem;
+  color: #12376e;
+  margin-bottom: 6rem;
+}
+
+.banner-btn {
+  width: 16rem;
+  height: 5rem;
+  background: linear-gradient(to top, #00154c, #123760, #23487f);
+  color: #fff;
+  border: 0.1rem solid #fff;
+  border-radius: 0.5rem;
+  outline: none;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+.banner-btn:hover .banner-btn-text-one {
+  top: -100%;
+}
+
+.banner-btn:hover .banner-btn-text-two {
+  top: 50%;
+}
+
+.banner-btn-text-one {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.banner-btn-text-two {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+/* end of banner */
